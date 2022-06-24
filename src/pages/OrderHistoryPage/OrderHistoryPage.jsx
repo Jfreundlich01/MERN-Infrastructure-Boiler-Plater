@@ -1,4 +1,4 @@
-import "./OrderHistory.css"
+import "./OrderHistoryPage.css"
 
 export default function OrderHistory() {
   return (
