@@ -35,7 +35,7 @@ export default class SignUpForm extends Component {
         //signUp method. Going to pass formData state, is going to allow us to pass data to server to signup
         const user = await signUp(formData)
         //baby step! - later going to get a webtoken
-        console.log(user)
+        this.props.setUser(user)
 
       } catch {
         //an error occured
