@@ -14,7 +14,7 @@ export default function App() {
     <main className="App">
       {user ? 
         <>
-        <Navbar user={user}/>
+        <Navbar user={user} setUser={setUser}/>
         <Routes>
           {/* Route Compnents in Here  */}
           <Route path="/orders/new" element={<NewOrderPage />}></Route>
