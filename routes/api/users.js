@@ -9,4 +9,6 @@ router.post('/', usersCtrl.create);
 
 router.post('/login', usersCtrl.login)
 
+router.get('/check-token', usersCtrl.checkToken);
+
 module.exports = router;

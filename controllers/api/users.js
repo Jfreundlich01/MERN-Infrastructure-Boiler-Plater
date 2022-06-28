@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken")
 
 const bcrypt = require('bcrypt');
 
-module.exports = { create, login }
+module.exports = { create, login, checkToken }
 
 
 async function create(req, res) {
@@ -32,6 +32,12 @@ async function login(req,res) {
   } catch(err){
     res.status(400).json('Bad Credentials')
   }
+}
+
+function checkToken(req, res) {
+  // req.user will always be there for you when a token is sent
+  console.log('req.user', req.user);
+  res.json(req.exp);
 }
 
 /*-- Helper Functions --*/
